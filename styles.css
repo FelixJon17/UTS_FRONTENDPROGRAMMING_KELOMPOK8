@@ -12,7 +12,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navbar */
 .navbar {
     background-color: #333;
     color: white;
@@ -53,7 +52,6 @@ body {
     color: #f39c12;
 }
 
-/* Hero Section */
 .hero-section {
     background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -102,7 +100,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Card Grid */
 .card-grid {
     display: flex;
     justify-content: space-around;
