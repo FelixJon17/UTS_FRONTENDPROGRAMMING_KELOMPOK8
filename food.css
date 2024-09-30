@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(150deg, #325bae, #760f8f);
+    color: #000000;
+    background: linear-gradient(135deg, #a2d9ff, #ffb6c1);;
 }
 
 .navbar {
@@ -58,14 +58,29 @@ body {
     text-align: center;
 }
 
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Mulai dari sedikit di atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
 .section h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
+    color: 34495e;
+    animation: fadeInSlide 2s ease forwards;
+    
 }
 
 .section p {
     margin-bottom: 2rem;
     font-size: 1.2rem;
+    color: #000000;
 }
 
 .card-grid {
@@ -78,20 +93,23 @@ body {
     display: flex;
     align-items: center;
     width: 95%;
+    height: 300px;
     margin-bottom: 2rem;
     background-color: rgb(155, 155, 155);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
 }
 
 .card img {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;  
     transition: transform 0.5s ease;
 }
+
 
 .card-content {
     flex: 1;
@@ -99,7 +117,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    height: 100%;
+    color: #2c3e50;
 }
 
 .card-content h3, .card-content h4 {
@@ -111,6 +131,15 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-top: 1rem;
+}
+
+.card:hover.card-content {
+    transform: translateY(-10px);
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card img:hover {
