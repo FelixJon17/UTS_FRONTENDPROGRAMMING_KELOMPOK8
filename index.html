@@ -4,38 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashion & Lifestyle Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>FunBlogToGo</title>
+    <!-- link to CSS and Box Icons -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">FunBlogToGo</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+    <!-- header section -->
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo"><span>Fun</span>BlogToGO</a>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="fashion.html">Fashion</a></li>
                 <li><a href="food.html">Food</a></li>
                 <li><a href="travel.html">Travel</a></li>
-            </ul>
+            <!-- <a href="#" class="login">Login</a> -->
         </div>
-    </nav>
-
-    <!-- Homescreen-->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Find Out</h1>
-            <p>Your go-to platform for fashion, food, and travel inspiration</p>
+    </header>
+    
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">FunBlogToGo</h2>
+            <span class="home-subtitle">Your source of great content</span>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 FunBlogToGo. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- post filter -->
+    <!-- <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="Fashion">Fashion</span>
+        <span class="filter-item" data-filter="Food">Food</span>
+        <span class="filter-item" data-filter="Travel">Travel</span>
+    </div> -->
 
+    <!-- post section -->
+    <section class="post container">
+
+        <!-- post box fashion -->
+        <div class="post-box">
+            <img src="img/fashion/casual.jpg" alt="" class="post-img">
+            <h2 class="category">Fashion</h2>
+            <a href="#" class="post-title">Casual Style</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">It looks simple and is loved by today's youth because it looks clean!</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/fashion/skena.jpg" alt="" class="post-img">
+            <h2 class="category">Fashion</h2>
+            <a href="#" class="post-title">Skena Style</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Different and bold! A style that's a hit among young people these days</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/fashion/blockcore.jpg" alt="" class="post-img">
+            <h2 class="category">Fashion</h2>
+            <a href="#" class="post-title">BlockCore Style</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Unique and interesting mix of styles that are unusual but fun to follow!</p>
+        </div>
+
+        <!-- post box food -->
+        <div class="post-box">
+            <img src="img/food/pho.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Vietnam Pho</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Phở or Pho is a Vietnamese soup dish consisting of broth, rice noodles, herbs, and meat, 
+                sometimes chicken. Phở is a popular food in Vietnam where it is served in households, street-stalls, and 
+                restaurants country-wide.</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/food/croissant.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Croissant</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">A croissant is a French pastry made from puff pastry in a crescent shape. It is a buttery, flaky, 
+                viennoiserie pastry inspired by the shape of the Austrian kipferl.</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/food/sushi.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Sushi</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Sushi is a traditional Japanese dish that consists of vinegared rice, often combined 
+                with various ingredients such as raw or cooked seafood, vegetables, and sometimes tropical fruits. 
+                It is typically accompanied by soy sauce, pickled ginger, and wasabi. The key ingredient in sushi is the sushi rice, 
+                which is seasoned with a mixture of vinegar, sugar, and salt.</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/food/nasipadang.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Nasi Padang</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Best Indonesian Food Ever.</p>
+        </div>
+
+        <!-- post box travel -->
+        <div class="post-box">
+            <img src="img/travel/bromo.jpeg" alt="" class="post-img">
+            <h2 class="category">Travel</h2>
+            <a href="#" class="post-title">Bromo Mountain</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Adventure awaits in the serene mountains.</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/travel/pantaikelingking.jpeg" alt="" class="post-img">
+            <h2 class="category">Travel</h2>
+            <a href="#" class="post-title">Kelingking Beach</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Relax and unwind on the best beaches across the globe.</p>
+        </div>
+
+        <div class="post-box">
+            <img src="img/travel/jakarta.jpeg" alt="" class="post-img">
+            <h2 class="category">Travel</h2>
+            <a href="#" class="post-title">City light Jakarta</a>
+            <span class="post-date">30 Sep 2024</span>
+            <p class="post-description">Explore bustling cities filled with culture and excitement.</p>
+        </div>
+
+    </section>
+
+    <!-- link to JS -->
+    <script src="main.js"></script>
 </body>
 </html>
