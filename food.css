@@ -43,7 +43,8 @@ header{
 .nav li {
     margin: 0 15px; 
     color: #fff;
-    list-style: none;
+    list-style: none
+    
 }
 
 .nav li a {
@@ -57,6 +58,9 @@ header{
     color: var(--second-color); 
 }
 
+a{
+    text-decoration: none;
+}
 
 .logo{
     font-size: 1.5rem;

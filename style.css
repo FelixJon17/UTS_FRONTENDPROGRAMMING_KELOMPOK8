@@ -19,12 +19,15 @@
 a{
     text-decoration: none;
 }
+
 li{
     list-style: none;
 }
+
 img{
     width: 100% ;
 }
+
 section{
     padding: 3rem 0  2rem;
 }

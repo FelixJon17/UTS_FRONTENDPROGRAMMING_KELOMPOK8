@@ -56,6 +56,9 @@ header{
     color: var(--second-color); 
 }
 
+a{
+    text-decoration: none;
+}
 
 .logo{
     font-size: 1.5rem;
