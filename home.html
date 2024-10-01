@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
-        // Function to switch between sections
+        // Function untuk ganti section
         function showSection(section) {
-            // Hide all sections
+            // Menyembunyikan semua section
             document.querySelectorAll('.section').forEach(sec => {
                 sec.style.display = 'none';
             });
-            // Show the selected section
+            // Menampilkan section yang dipilih  
             document.getElementById(section).style.display = 'block';
         }
 
-        // Load Home section by default
+        // Menampilkan Home Section sebagai default page 
         window.onload = function() {
             showSection('home');
         }
     </script>
 </head>
 <body>
+    
     <!-- Navbar -->
     <header>
         <div class="nav container">
@@ -37,20 +38,27 @@
             </ul>
         </div>
     </header>
-
+    
     <!-- Home Section -->
-    <section class="section" id="home">
+    
+    <section class="section" id="home"  style="display:block">
         <div class="home-text container">
             <h2 class="home-title">FunBlogToGo</h2>
             <span class="home-subtitle">Your source of great content</span>
         </div>
-        <div class="post-filter container">
-            <span class="filter-item active-filter" data-filter="all">All</span>
-            <span class="filter-item" data-filter="Fashion">Fashion</span>
-            <span class="filter-item" data-filter="Food">Food</span>
-            <span class="filter-item" data-filter="Travel">Travel</span>
-        </div>
+
+     <!-- post filter -->
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="Fashion">Fashion</span>
+        <span class="filter-item" data-filter="Food">Food</span>
+        <span class="filter-item" data-filter="Travel">Travel</span>
+    </div>
+
+    <!--  post section -->
         <section class="post container">
+
+            <!-- post box fashion -->
             <div class="post-box">
                 <img src="img/fashion/casual.jpg" alt="" class="post-img">
                 <h2 class="category">Fashion</h2>
@@ -139,7 +147,6 @@
             </div>
         </section>
     </section>
-
     <!-- Fashion Section -->
     <section class="section" id="fashion" style="display:none;">
         <div class="container">
@@ -278,6 +285,14 @@
                             it is used as food aid for victims of natural disasters because it is long-lasting and has nutritional content.</p>
                     </div>
                 </div>
+                <div class="card">
+                    <img src="img/food/pizza.jpg" alt="Food 8">
+                    <div class="card-content">
+                        <h4>Pizza</h4>
+                        <p>Pizza is an Italian dish typically consisting of a flat base of leavened wheat-based dough topped with tomato, cheese, and other ingredients, baked at 
+                            a high temperature, traditionally in a wood-fired oven.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -303,6 +318,13 @@
                         <img src="img/travel/jakarta.jpeg" alt="Travel 3">
                         <h3>City light Jakarta</h3>
                         <p>Explore bustling cities filled with culture and excitement.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/travel/londonbridge.jpg" alt="Travel 3">
+                        <h3>London Bridge</h3>
+                        <p>The name "London Bridge" refers to several historic crossings that have spanned the 
+                            River Thames between the City of London and Southwark, in central London since Roman times. 
+                            The current crossing, which opened to traffic in 1973, is a box girder bridge built from concrete and steel.</p>
                     </div>
                 </div>
             </div>
