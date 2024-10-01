@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FunBlogToGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        // Function to switch between sections
+        function showSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(section).style.display = 'block';
+        }
+
+        // Load Home section by default
+        window.onload = function() {
+            showSection('home');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <ul style="display: flex; align-items: center;">
+                <li><a href="#" class="logo" onclick="showSection('home')"><span>Fun</span>BlogToGO</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('fashion')">Fashion</a></li>
+                <li><a href="#" onclick="showSection('food')">Food</a></li>
+                <li><a href="#" onclick="showSection('travel')">Travel</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="section" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">FunBlogToGo</h2>
+            <span class="home-subtitle">Your source of great content</span>
+        </div>
+        <div class="post-filter container">
+            <span class="filter-item active-filter" data-filter="all">All</span>
+            <span class="filter-item" data-filter="Fashion">Fashion</span>
+            <span class="filter-item" data-filter="Food">Food</span>
+            <span class="filter-item" data-filter="Travel">Travel</span>
+        </div>
+        <section class="post container">
+            <div class="post-box">
+                <img src="img/fashion/casual.jpg" alt="" class="post-img">
+                <h2 class="category">Fashion</h2>
+                <a href="#" class="post-title">Casual Style</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">It looks simple and is loved by today's youth because it looks clean!</p>
+            </div>
+            <div class="post-box">
+                <img src="img/fashion/skena.jpg" alt="" class="post-img">
+                <h2 class="category">Fashion</h2>
+                <a href="#" class="post-title">Skena Style</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Different and bold! A style that's a hit among young people these days</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/fashion/blockcore.jpg" alt="" class="post-img">
+                <h2 class="category">Fashion</h2>
+                <a href="#" class="post-title">BlockCore Style</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Unique and interesting mix of styles that are unusual but fun to follow!</p>
+            </div>
+    
+            <!-- post box food -->
+            <div class="post-box">
+                <img src="img/food/pho.jpg" alt="" class="post-img">
+                <h2 class="category">Food</h2>
+                <a href="#" class="post-title">Vietnam Pho</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Phở or Pho is a Vietnamese soup dish consisting of broth, rice noodles, herbs, and meat, 
+                    sometimes chicken. Phở is a popular food in Vietnam where it is served in households, street-stalls, and 
+                    restaurants country-wide.</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/food/croissant.jpg" alt="" class="post-img">
+                <h2 class="category">Food</h2>
+                <a href="#" class="post-title">Croissant</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">A croissant is a French pastry made from puff pastry in a crescent shape. It is a buttery, flaky, 
+                    viennoiserie pastry inspired by the shape of the Austrian kipferl.</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/food/sushi.jpg" alt="" class="post-img">
+                <h2 class="category">Food</h2>
+                <a href="#" class="post-title">Sushi</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Sushi is a traditional Japanese dish that consists of vinegared rice, often combined 
+                    with various ingredients such as raw or cooked seafood, vegetables, and sometimes tropical fruits. 
+                    It is typically accompanied by soy sauce, pickled ginger, and wasabi. The key ingredient in sushi is the sushi rice, 
+                    which is seasoned with a mixture of vinegar, sugar, and salt.</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/food/nasipadang.jpg" alt="" class="post-img">
+                <h2 class="category">Food</h2>
+                <a href="#" class="post-title">Nasi Padang</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Best Indonesian Food Ever.</p>
+            </div>
+    
+            <!-- post box travel -->
+            <div class="post-box">
+                <img src="img/travel/bromo.jpeg" alt="" class="post-img">
+                <h2 class="category">Travel</h2>
+                <a href="#" class="post-title">Bromo Mountain</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Adventure awaits in the serene mountains.</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/travel/pantaikelingking.jpeg" alt="" class="post-img">
+                <h2 class="category">Travel</h2>
+                <a href="#" class="post-title">Kelingking Beach</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Relax and unwind on the best beaches across the globe.</p>
+            </div>
+    
+            <div class="post-box">
+                <img src="img/travel/jakarta.jpeg" alt="" class="post-img">
+                <h2 class="category">Travel</h2>
+                <a href="#" class="post-title">City light Jakarta</a>
+                <span class="post-date">30 Sep 2024</span>
+                <p class="post-description">Explore bustling cities filled with culture and excitement.</p>
+            </div>
+        </section>
+    </section>
+
+    <!-- Fashion Section -->
+    <section class="section" id="fashion" style="display:none;">
+        <div class="container">
+            <h2>Fashion Trends</h2>
+            <p>Stay ahead in fashion with the latest trends, tips, and guides to perfect your style.</p>
+            <div class="card-grid">
+                <div class="card blockcore-card">
+                    <img src="img/fashion/blockcore.jpg" alt="Fashion 1">
+                    <div class="card-content">
+                        <h3>BlockCore Style</h3>
+                        <p>Unique and interesting mix of styles that are unusual but fun to follow!</p>
+                        <p>Apa itu “The Bloke Core”? Tren Fashion Baru yang Bermula dari TikTok “The Bloke Core”. Tren ini didasarkan pada gaya berpakaian stereotypical pub-goer British men yang notabene tidak memiliki ketertarikan terhadap fashion. Hence, penggunaan jersey tim sepak bola kesukaannya untuk pakaian sehari-hari.</p>
+                       
+                    </div>
+                </div>
+                <div class="card casual-card">
+                    <img src="img/fashion/casual.jpg" alt="Fashion 2">
+                    <div class="card-content">
+                        <h3>Casual Style</h3>
+                        <p>Apa Itu Casual Style? Casual style adalah gaya pakaian yang nyaman, santai, dan tidak terlalu formal. Gaya ini sering digunakan dalam situasi sehari-hari atau saat kamu ingin tampil rileks tanpa terlalu banyak pernak-pernik. Pemilihan outfit casual style merupakan aspek penting dalam dunia fashion yang memungkinkan kita untuk tampil santai namun tetap stylish dalam berbagai kesempatan.</p>
+                    </div>
+                </div>
+                <div class="card skena-card">
+                    <img src="img/fashion/skena.jpg" alt="Fashion 3">
+                    <div class="card-content">
+                        <h3>Skena Style</h3>
+                        <p>Apa Itu Skena dan Gimana Ciri Khas Outfitnya? Skena outfit dapat dipahami sebagai gaya berpakaian penyuka genre musik tertentu. Skena sendiri adalah istilah budaya pop yang merujuk pada komunitas dengan ciri khas tertentu. Setiap skena memiliki gaya berpakaian dengan ciri khas tersendiri. Seperti skena punk yang tentu berbeda dengan skena hip-hop.</p>
+                    </div>
+                </div>
+                <div class="card trendy-card">
+                    <img src="img/fashion/retroo.jpg" alt="Fashion 4">
+                    <div class="card-content">
+                        <h3>Trendy Style</h3>
+                        <p>Apa itu Trendy Style? Tren fashion yang selalu mengikuti perkembangan terkini dan dipengaruhi oleh desainer dan influencer.</p>
+                    </div>
+                </div>
+                <div class="card vintage-card">
+                    <img src="img/fashion/streetwearr.jpg" alt="Fashion 5">
+                    <div class="card-content">
+                        <h3>Vintage Style</h3>
+                        <p>Apa itu Vintage Style? Gaya yang terinspirasi oleh tren fashion masa lalu, membawa kembali desain dan elemen dari era sebelumnya.</p>
+                    </div>
+                </div>
+                <div class="card sporty-card">
+                    <img src="img/fashion/athleisuree.jpg" alt="Fashion 6">
+                    <div class="card-content">
+                        <h3>Sporty Style</h3>
+                        <p>Apa itu Sporty Style? Gaya pakaian yang nyaman dan cocok untuk aktivitas sehari-hari, seringkali terinspirasi oleh olahraga.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="section" id="food" style="display:none;">
+        <div class="container">
+            <h2>Food & Culinary Experiences</h2>
+            <p>Explore trending dishes and unique culinary experiences.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="img/food/pho.jpg" alt="Food 1">
+                    <div class="card-content">
+                        <h3>Phở</h3>
+                        <p>Phở or Pho is a Vietnamese soup dish consisting of broth, rice noodles, herbs, and meat, 
+                            sometimes chicken. Phở is a popular food in Vietnam where it is served in households, street-stalls, and 
+                            restaurants country-wide.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/croissant.jpg" alt="Food 2">
+                    <div class="card-content">
+                        <h3>Croissant</h3>
+                        <p>A croissant is a French pastry made from puff pastry in a crescent shape. It is a buttery, flaky, 
+                            viennoiserie pastry inspired by the shape of the Austrian kipferl.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/tacos.jpg" alt="Food 3">
+                    <div class="card-content">
+                        <h3>Tacos</h3>
+                        <p>A taco is a traditional Mexican dish consisting of a small hand-sized corn- or wheat-based tortilla topped with a filling. 
+                            The tortilla is then folded around the filling and eaten by hand.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/sushi.jpg" alt="Food 4">
+                    <div class="card-content">
+                        <h3>Sushi</h3>
+                        <p>
+                            Sushi is a traditional Japanese dish that consists of vinegared rice, often combined 
+                            with various ingredients such as raw or cooked seafood, vegetables, and sometimes tropical fruits. 
+                            It is typically accompanied by soy sauce, pickled ginger, and wasabi. The key ingredient in sushi is the sushi rice, 
+                            which is seasoned with a mixture of vinegar, sugar, and salt.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/nasipadang.jpg" alt="Food 5">
+                    <div class="card-content">
+                        <h4>Nasi Padang</h4>
+                        <p>Nasi padang, sometimes referred to as Padang rice, is a Minangkabau dish of steamed rice served with various choices of pre-cooked 
+                            dishes originating from West Sumatra, Indonesia. It is named after the city of Padang, capital of the West Sumatra province.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/tanghulu.jpg" alt="Food 6">
+                    <div class="card-content">
+                        <h4>Tanghulu</h4>
+                        <p>Tanghulu or bingtanghulu is a traditional Chinese candied fruit. It is commonly available in cities across China, 
+                            such as Beijing, Tianjin, and Shanghai. It is served on a skewer of bamboo sticks about 20cm long.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/fishnchips.jpg" alt="Food 7">
+                    <div class="card-content">
+                        <h4>Fish and Chips</h4>
+                        <p>classic dish of the British Isles, consisting of battered and deep-fried fish, usually cod or haddock, and french fries..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/pekingduck.jpg" alt="Food 8">
+                    <div class="card-content">
+                        <h4>Peking Duck</h4>
+                        <p>Peking duck is a dish from Beijing that has been prepared since the Imperial era. The meat is characterized by its thin, crispy skin, 
+                            with authentic versions of the dish serving mostly the skin and little meat, sliced in front of the diners by the cook.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/food/rendang.jpg" alt="Food 8">
+                    <div class="card-content">
+                        <h4>Rendang</h4>
+                        <p>Rendang is one of Indonesian dishes which is famous for its deliciousness. Rendang is a meat dish originating from Minangkabau, West Sumatra, 
+                            Indonesia. The process of cooking rendang at low temperature for a long time, uses coconut milk and various Indonesian spices which are slightly 
+                            spicy so that it adds to its distinctiveness and delicacy. The cooking process is so long that it produces soft rendang meat and spices that seep 
+                            into the meat. Rendang is also known to be a durable food that can last for weeks, suitable for use in winter, the more delicious it will be. So that 
+                            it is used as food aid for victims of natural disasters because it is long-lasting and has nutritional content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="section" id="travel" style="display:none;">
+        <div class="container">
+            <h2>Travel Destinations</h2>
+            <p>Discover your next destination, from hidden gems to the most popular travel spots worldwide.</p>
+            <div class="card-grid">
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="img/travel/pantaikelingking.jpeg" alt="Travel 1">
+                        <h3>Kelingking Beach</h3>
+                        <p>Relax and unwind on the best beaches across the globe.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/travel/bromo.jpeg" alt="Travel 2">
+                        <h3>Bromo Mountain</h3>
+                        <p>Adventure awaits in the serene mountains.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/travel/jakarta.jpeg" alt="Travel 3">
+                        <h3>City light Jakarta</h3>
+                        <p>Explore bustling cities filled with culture and excitement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FunBlogToGo. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
