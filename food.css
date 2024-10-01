@@ -9,7 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #000000;
-    background: linear-gradient(90deg, #ff9100, #e9bd0d);;
+    background: linear-gradient(90deg, #ff9100, #e9bd0d);
 }
 
 :root{
@@ -33,6 +33,7 @@ header{
     justify-content: center;
     align-items: center;
     padding: 18px 0;
+
 }
 
 .nav li {
@@ -42,7 +43,7 @@ header{
 }
 
 .nav li a {
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 15px; 
     transition: color 0.3s; 
     
@@ -125,7 +126,7 @@ header{
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff;
+    background-color: #d6d6d6;
 }
 
 .card img {
