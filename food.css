@@ -1,15 +1,19 @@
 /* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0 ;
+    padding: 0 ;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem ;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: #000000;
-    background: linear-gradient(90deg, #ff9100, #e9bd0d);
+    color: #333333; /* Darker text color for contrast */
+    background: linear-gradient(90deg, #e9bd0d,#ff9100) /* Pastel gradient */
 }
 
 :root{
