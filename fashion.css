@@ -13,10 +13,10 @@ body {
 }
 
 :root {
-    --container-color: #ffffff; /* Changed to a lighter color */
-    --second-color: #fd8f44; /* Orange */
-    --text-color: #333333; /* Darker text color for better visibility */
-    --bg-color: #ffffff; /* Changed background color to white */
+    --container-color: #ffffff; 
+    --second-color: #fd8f44; 
+    --text-color: #333333; 
+    --bg-color: #ffffff; 
 }
 
 header {
