@@ -12,14 +12,14 @@ body {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pastel gradient */
 }
 
-:root {
-    --container-color: #ffffff; 
-    --second-color: #fd8f44; 
-    --text-color: #333333; 
-    --bg-color: #ffffff; 
+:root{
+    --container-color: #1a1e21;
+    --second-color: #fd8f44;
+    --text-color: #172317;
+    --bg-color: #fff;
 }
 
-header {
+header{
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ header {
     background-color: var(--container-color);
 }
 
-.nav {
+.nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,29 +37,46 @@ header {
 
 .nav li {
     margin: 0 15px; 
-    color: #333333; /* Changed to match the body text */
+    color: #fff;
     list-style: none;
 }
 
 .nav li a {
-    color: #333333; /* Changed link color for better contrast */
+    color: white;
     padding: 10px 15px; 
     transition: color 0.3s; 
+    
 }
 
 .nav li a:hover {
     color: var(--second-color); 
 }
 
-.logo {
+
+.logo{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--bg-color);
 }
 
-.logo span {
+.logo span{
     color: var(--second-color);
 }
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+  }
+  
+  .login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+  }
+
 
 /* Sections */
 .section {

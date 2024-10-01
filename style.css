@@ -145,11 +145,18 @@ header{
     gap: 1.5rem;
   }
 
+
 .post-box{
     background: var(--bg-color);
     box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
     padding: 15px;
     border-radius: 0.5rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.post-box:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .post-img {
