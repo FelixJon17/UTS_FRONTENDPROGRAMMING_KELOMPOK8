@@ -212,3 +212,14 @@ a{
 .learn-more:hover {
     background: hsl(24, 98%, 58%);
 }
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0;
+}
