@@ -96,17 +96,18 @@
 
     <script>
         function filterCards() {
-
+    
             let input = document.getElementById('searchInput').value.toLowerCase();
-
+    
             let cards = document.getElementsByClassName('card');
     
-
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
                 let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
-                
-                if (title.innerText.toLowerCase().indexOf(input) > -1) {
+                let description = cardContent.getElementsByTagName('p')[0]; 
+    
+
+                if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
                 } else {
                     cards[i].style.display = "none";
