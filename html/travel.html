@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Travel Section</title>
-
+<<<<<<< HEAD:travel.html
     <link rel="stylesheet" href="travel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+=======
     <link rel="stylesheet" href="../css/travel.css">
->
+>>>>>>> fccd48349f7c146a7fd50ac60bf4780bffac7a91:html/travel.html
 </head>
 <body>    
     
@@ -35,6 +34,7 @@
             </div>
         </div>
     </header>
+    
     <!-- Travel Section -->
     <section id="travel" class="section">
         <div class="container">
@@ -73,17 +73,18 @@
 
     <script>
         function filterCards() {
-
+    
             let input = document.getElementById('searchInput').value.toLowerCase();
-
+    
             let cards = document.getElementsByClassName('card');
     
-
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
                 let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
-                
-                if (title.innerText.toLowerCase().indexOf(input) > -1) {
+                let description = cardContent.getElementsByTagName('p')[0]; 
+    
+
+                if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
                 } else {
                     cards[i].style.display = "none";
@@ -91,6 +92,5 @@
             }
         }
     </script>
-
 </body>
 </html>

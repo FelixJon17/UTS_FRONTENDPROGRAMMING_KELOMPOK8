@@ -27,8 +27,8 @@
             </ul>
 
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search for food..." onkeyup="filterCards()">
-                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for food...">
+                <i class="fas fa-search" id="searchIcon"></i>
             </div>
         </div>
     </header>
@@ -94,6 +94,14 @@
                     </div>
                 </div>
                 <div class="card">
+                    <img src="../img/food/rendang.jpg" alt="Food 9">
+                    <div class="card-content">
+                        <h4>Rendang</h4>
+                        <p>Rendang is a meat-based dish that originates from Minangkabau, West Sumatra and is produced from a long, low temperature cooking process 
+                            using various spices and coconut milk. The cooking process takes hours until all that remains are pieces of dark black meat and bran.</p>
+                    </div>
+                </div>
+                <div class="card">
                     <img src="../img/food/fishnchips.jpg" alt="Food 7">
                     <div class="card-content">
                         <h4>Fish and Chips</h4>
@@ -117,11 +125,27 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../img/food/pasta.jpg" alt="Food 10">
+                    <img src="../img/food/pasta.jpg" alt="Food 11">
                     <div class="card-content">
                         <h4>Pasta</h4>
                         <p>Pasta is an Italian dish made from wheat flour dough mixed with water or eggs, formed into sheets or shapes, and typically boiled. 
                             Pasta is often served with various sauces and toppings like tomato sauce, meat, cheese, or vegetables.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/food/lasagna.jpg" alt="Food 12">
+                    <div class="card-content">
+                        <h4>Lasagna</h4>
+                        <p>Lasagna, also known as lasagne, is a type of pasta, possibly one of the oldest types, made in very wide, flat sheets. The same-named Italian dish 
+                            is made of stacked layers of lasagna alternating with fillings such as ragù, béchamel sauce, vegetables, cheeses, and seasonings and spices.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/food/ramen.jpg" alt="Food 13">
+                    <div class="card-content">
+                        <h4>Ramen</h4>
+                        <p>Ramen is a Japanese noodle dish. It consists of Chinese-style wheat noodles served in a broth. Common flavors are soy sauce and miso, with typical toppings 
+                            including sliced pork, nori, menma, and scallions. Ramen has its roots in Chinese noodle dishes and is a part of Japanese Chinese cuisine.</p>
                     </div>
                 </div>
             </div>
@@ -141,24 +165,44 @@
 
     <script>
         function filterCards() {
-
             let input = document.getElementById('searchInput').value.toLowerCase();
-
             let cards = document.getElementsByClassName('card');
-    
+            let noResultsMessage = document.getElementById('noResultsMessage');
+            let visibleCards = 0;
 
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
                 let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
-                
-                if (title.innerText.toLowerCase().indexOf(input) > -1) {
+                let description = cardContent.getElementsByTagName('p')[0];
+
+                if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
+                    visibleCards++;
                 } else {
                     cards[i].style.display = "none";
                 }
             }
-        }
-    </script>
 
+            if (visibleCards === 0) {
+                noResultsMessage.style.display = "block";
+            } else {
+                noResultsMessage.style.display = "none";
+            }
+        }
+
+        // Event listener for search input
+        document.getElementById('searchInput').addEventListener('keyup', filterCards);
+
+        // Event listener for search icon
+        document.getElementById('searchIcon').addEventListener('click', function() {
+            filterCards();
+        });
+
+        // Responsive menu toggle
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+        });
+    </script>
+    
 </body>
 </html>
