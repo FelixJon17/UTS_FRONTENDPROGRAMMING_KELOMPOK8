@@ -34,4 +34,4 @@ $(document).ready(function() {
 $(".filter-item").click(function() {
     $(this).addClass("active-filter").siblings().removeClass("active-filter");
   });
-
+  
