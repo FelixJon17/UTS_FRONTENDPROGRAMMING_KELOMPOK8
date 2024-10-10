@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>    
-    
+
     <!-- Navbar -->
     <header>
         <div class="nav container">
@@ -38,19 +38,50 @@
             <p>Discover your next destination, from hidden gems to the most popular travel spots worldwide.</p>
             <div class="card-grid">
                 <div class="card">
-                    <img src="../img/travel/pantaikelingking.jpeg" alt="Travel 1">
-                    <h3>Kelingking Beach</h3>
-                    <p>Relax and unwind on the best beaches across the globe.</p>
+                    <img src="../img/travel/bali.jpg">
+                    <div class="card-content">
+                        <h3>Bali</h3>
+                        <p>Bali, often referred to as the "Island of the Gods," is a popular travel destination in Indonesia known for its stunning natural beauty, vibrant culture, and diverse activities. The island boasts picturesque beaches, lush rice terraces, and majestic volcanoes, making it a paradise for nature lovers and adventure seekers alike.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../img/travel/bromo.jpeg" alt="Travel 2">
-                    <h3>Bromo Mountain</h3>
-                    <p>Adventure awaits in the serene mountains.</p>
+                    <img src="../img/travel/losangeles.jpg">
+                    <div class="card-content">
+                        <h3>Los Angeles</h3>
+                        <p>
+                            Los Angeles, often referred to as LA, is a vibrant city located in Southern California, known for its diverse culture, iconic landmarks, and entertainment industry. As the heart of the film and television world, it is home to Hollywood, where visitors can explore the Walk of Fame, visit movie studios, and catch a glimpse of celebrity life.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../img/travel/jakarta.jpeg" alt="Travel 3">
-                    <h3>City light Jakarta</h3>
-                    <p>Explore bustling cities filled with culture and excitement.</p>
+                    <img src="../img/travel/colombie.jpg">
+                    <div class="card-content">
+                        <h3>Colombia</h3>
+                        <p>
+                            Colombia is a vibrant travel destination known for its diverse landscapes, rich culture, and warm hospitality. From the bustling streets of Bogotá, the capital city, where visitors can explore museums, art galleries, and historical sites, to the stunning Caribbean coast featuring beautiful beaches in places like Cartagena and Santa Marta, Colombia offers a variety of experiences for travelers..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/travel/california.jpg">
+                    <div class="card-content">
+                        <h3>California</h3>
+                        <p>California, often referred to as the Golden State, is a premier travel destination known for its diverse landscapes, vibrant cities, and rich cultural experiences. From the stunning coastline of the Pacific Ocean, including iconic spots like Malibu and Big Sur, to the majestic Sierra Nevada mountains, California offers a wide range of outdoor activities such as hiking, surfing, and skiing.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/travel/mexico.jpg">
+                    <div class="card-content">
+                        <h3>Mexico</h3>
+                        <p>
+                            Mexico is a vibrant travel destination that offers a rich tapestry of history, culture, and natural beauty. From the ancient ruins of the Maya and Aztec civilizations, such as Chichen Itza and Teotihuacan, to the bustling streets of Mexico City, where visitors can explore world-class museums and culinary delights, the country is steeped in fascinating heritage..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/travel/venezuela.jpg">
+                    <div class="card-content">
+                        <h3>Venezuela</h3>
+                        <p>
+                            Venezuela is a diverse and captivating travel destination known for its stunning natural landscapes, rich culture, and vibrant cities. Home to the world's highest waterfall, Angel Falls, located in the Canaima National Park, visitors can experience breathtaking views and lush rainforests. The Andes Mountains offer opportunities for hiking and exploring charming towns like Mérida, known for its colonial architecture and vibrant markets..</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,16 +96,13 @@
 
     <script>
         function filterCards() {
-    
             let input = document.getElementById('searchInput').value.toLowerCase();
-    
             let cards = document.getElementsByClassName('card');
-    
+
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
-                let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
+                let title = cardContent.getElementsByTagName('h3')[0];
                 let description = cardContent.getElementsByTagName('p')[0]; 
-    
 
                 if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";

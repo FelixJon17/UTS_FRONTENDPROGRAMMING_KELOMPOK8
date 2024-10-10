@@ -1,40 +1,38 @@
 /* Reset styles */
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
-*{
-    font-family: 'poppins', sans-serif;
-    margin: 0 ;
-    padding: 0 ;
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem ;
+    scroll-padding-top: 2rem;
     box-sizing: border-box;
 }
 
-
 body {
     line-height: 1.6;
-    color: #333333; /* Darker text color for contrast */
-    background: linear-gradient(90deg, #e9bd0d,#ff9100) /* Pastel gradient */
+    color: #333; /* Darker text color for contrast */
+    background: #ffffff; /* Set overall background to white */
 }
 
-
-:root{
-    --container-color: #1a1e21;
-    --second-color: #fd8f44;
+:root {
+    --container-color: #1a1e21; /* Keep this color for the header */
+    --second-color: #fd8f44; /* Original color for buttons */
     --text-color: #172317;
     --bg-color: #fff;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
-    background-color: var(--container-color);
+    background-color: var(--container-color); /* Keep header background */
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +49,6 @@ header{
     color: white;
     padding: 10px 15px; 
     transition: color 0.3s; 
-    
 }
 
 .nav li a:hover {
@@ -79,17 +76,17 @@ header{
     font-size: 18px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.logo{
+.logo {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--bg-color);
 }
 
-.logo span{
+.logo span {
     color: var(--second-color);
 }
 
@@ -98,17 +95,17 @@ a{
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 4px;
-    background: var(--second-color);
-    color: var(--bg-color);
-  }
-  
-  .login:hover {
-    background: hsl(24, 98%, 58%);
-    transition: 0.3s;
-  }
+    background: var(--second-color); /* Set button color back to original */
+    color: var(--bg-color); /* Set text color back to original */
+}
 
-  .login-btn {
-    background-color: var(--second-color);
+.login:hover {
+    background: hsl(24, 98%, 58%); /* Original hover color */
+    transition: 0.3s;
+}
+
+.login-btn {
+    background-color: var(--second-color); /* Set button color back to original */
     color: #fff;
     padding: 8px 16px;
     border-radius: 4px;
@@ -116,7 +113,7 @@ a{
 }
 
 .login-btn:hover {
-    background-color: hsl(24, 98%, 58%);
+    background-color: hsl(24, 98%, 58%); /* Original hover color */
 }
 
 /* Sections */
@@ -128,6 +125,7 @@ a{
 .section h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
+    color: #000; /* Set titles to black */
 }
 
 .section p {
@@ -142,57 +140,68 @@ a{
 }
 
 .card {
-    display: flex;
+    display: grid;
     align-items: center;
-    width: 95%;
-    margin-bottom: 2rem;
-    background-color: rgb(155, 155, 155);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    width: 30%; /* Original width */
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Hover Effect (removed the scale transformation) */
 .card img {
-    width: 40%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
+/* Removed the image scale effect on hover */
+/*
+.card img:hover {
+    transform: scale(1.1);
+}
+*/
+
+/* Card Content Styling */
 .card-content {
-    flex: 1;
     padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
+    position: relative;
 }
 
-.card-content h3, .card-content h4 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
+.card-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    color: #000; /* Set titles to black */
+    animation: fadeIn 0.5s;
 }
 
 .card-content p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-top: 1rem;
+    color: #555;
+    animation: fadeIn 0.5s 0.2s; /* Delay for the paragraph */
 }
 
-.card img:hover {
-    transform: scale(0.95); /* Zoom out effects */
-    transition: transform 0.5s ease;
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
-}
-
-.footer p {
-    margin: 0;
 }
