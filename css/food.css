@@ -88,6 +88,18 @@ a{
     transition: 0.3s;
   }
 
+  .login-btn {
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: hsl(24, 98%, 58%);
+}
+
 /* Sections */
 .section {
     padding: 4rem 0;
