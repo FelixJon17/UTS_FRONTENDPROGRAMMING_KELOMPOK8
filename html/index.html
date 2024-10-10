@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FunBlogToGo</title>
     <!-- link to CSS and Box Icons -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <li>
                     <a href="index.html" class="logo"><span>Fun</span>BlogToGO</a>
                 </li>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="fashion.html">Fashion</a></li>
                 <li><a href="food.html">Food</a></li>
                 <li><a href="travel.html">Travel</a></li>
@@ -25,12 +25,124 @@
         </div>
     </header>
     <!-- home section -->
-    <section class="home" id="home">
-        <div class="home-text container">
-            <h2 class="home-titles">FunBlogToGo</h2>
-            <span class="home-subtitle">Your source of great content</span>
+     <!-- carousel -->
+     <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../img/food/crossiant1.jpg">
+                <div class="content">
+                    <div class="title">FunBlogToGo</div>
+                    <div class="topic">FOOD</div>
+                    <div class="des">
+                        Croissant adalah pastry renyah berbentuk bulan sabit yang berasal dari Prancis. Dibuat dari adonan berlapis-lapis dengan mentega, menghasilkan tekstur yang lembut di dalam dan renyah di luar.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/fashion/casual1.jpg">
+                <div class="content">
+                    <div class="title">FunBlogToGo</div>
+                    <div class="topic">FASHION</div>
+                    <div class="des">
+                        Gaya kasual adalah pilihan pakaian yang nyaman dan santai, cocok untuk kegiatan sehari-hari. Biasanya terdiri dari jeans, kaos, dan sepatu kets, memberikan kesan rileks namun tetap stylish.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/travel/bromo1.jpg">
+                <div class="content">
+                    <div class="title">FunBlogToGo</div>
+                    <div class="topic">TRAVEL</div>
+                    <div class="des">
+                        Gunung Bromo, salah satu gunung berapi paling terkenal di Indonesia. Dikenal dengan panorama matahari terbit yang memukau dan pemandangan alam yang menakjubkan, ini adalah destinasi wajib bagi para pecinta petualangan alam.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/food/sushi1.jpg">
+                <div class="content">
+                    <div class="title">FunBlogToGo</div>
+                    <div class="topic">FOOD</div>
+                    <div class="des">
+                        Sushi adalah hidangan Jepang yang terdiri dari nasi yang dibumbui cuka, dikombinasikan dengan berbagai bahan seperti seafood, sayuran, dan terkadang buah tropis. Disajikan dalam potongan-potongan kecil, sushi menawarkan cita rasa yang unik dan seimbang.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/travel/kelingkingbeach1.jpg">
+                <div class="content">
+                    <div class="title">FunBlogToGo</div>
+                    <div class="topic">TRAVEL</div>
+                    <div class="des">
+                        Pantai Kelingking di Nusa Penida adalah destinasi populer dengan tebing curam yang unik, sering disebut mirip tulang belakang dinosaurus. Dari atas tebing, pengunjung bisa menikmati pemandangan laut biru jernih yang menakjubkan.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+        
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="../img/food/crossiant1.jpg">
+                <div class="content">
+                    <div class="title">Croissant</div>
+                    <div class="description">Pastry Prancis yang lezat</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/fashion/casual1.jpg">
+                <div class="content">
+                    <div class="title">Casual Style</div>
+                    <div class="description">Gaya santai sehari-hari</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/travel/bromo1.jpg">
+                <div class="content">
+                    <div class="title">Gunung Bromo</div>
+                    <div class="description">Keindahan alam Jawa Timur</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/food/sushi1.jpg">
+                <div class="content">
+                    <div class="title">Sushi</div>
+                    <div class="description">Hidangan Jepang yang ikonik</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/travel/kelingkingbeach1.jpg">
+                <div class="content">
+                    <div class="title">Kelingking Beach</div>
+                    <div class="description">Keindahan alam Nusa Penida</div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
 
     <!-- post filter -->
     <div class="post-filter container">
@@ -44,16 +156,16 @@
     <section class="post container">
 
         <div class="post-box Travel">
-            <img src="img/travel/bromo.jpeg" alt="Bromo Mountain" class="post-img">
+            <img src="../img/travel/bromo.jpeg" alt="Bromo Mountain" class="post-img">
             <h2 class="category">Travel</h2>
             <a href="#" class="post-title">Bromo Mountain</a>
             <span class="post-date">30 Sep 2024</span>
             <p class="post-description">Gunung Bromo, salah satu gunung berapi paling terkenal di Indonesia. Dikenal dengan panorama matahari terbit yang memukau dan pemandangan alam yang menakjubkan, ini adalah destinasi wajib bagi para pecinta petualangan alam.</p>
-            <a href="travel.html" class="learn-more">Learn More</a>
+            <a href="html/travel.html" class="learn-more">Learn More</a>
         </div>
 
         <div class="post-box Food">
-            <img src="img/food/tacos.jpg" alt="Tacos" class="post-img">
+            <img src="../img/food/tacos.jpg" alt="Tacos" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Tacos</a>
             <span class="post-date">30 Sep 2024</span>
@@ -62,16 +174,16 @@
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/casual.jpg" alt="Casual Style" class="post-img">
+            <img src="../img/fashion/casual.jpg" alt="Casual Style" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">Casual Style</a>
             <span class="post-date">30 Sep 2024</span>
             <p class="post-description">Casual style adalah gaya berpakaian yang nyaman dan sederhana, namun tetap stylish. Gaya ini banyak digemari oleh anak muda saat ini karena fleksibilitasnya dalam berbagai kesempatan sehari-hari.</p>
-            <a href="fashion.html" class="learn-more">Learn More</a>
+            <a href="html/fashion.html" class="learn-more">Learn More</a>
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/skena.jpg" alt="" class="post-img">
+            <img src="../img/fashion/skena.jpg" alt="" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">Skena Style</a>
             <span class="post-date">30 Sep 2024</span>
@@ -80,7 +192,7 @@
         </div>
 
         <div class="post-box Food">
-            <img src="img/food/fishnchips.jpg" alt="" class="post-img">
+            <img src="../img/food/fishnchips.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Fish and Chips</a>
             <span class="post-date">30 Sep 2024</span>
@@ -89,7 +201,7 @@
         </div>
 
         <div class="post-box Food">
-            <img src="img/food/tanghulu.jpg" alt="" class="post-img">
+            <img src="../img/food/tanghulu.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Tanghulu</a>
             <span class="post-date">30 Sep 2024</span>
@@ -98,7 +210,7 @@
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/blockcore.jpg" alt="" class="post-img">
+            <img src="../img/fashion/blockcore.jpg" alt="" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">BlockCore Style</a>
             <span class="post-date">30 Sep 2024</span>
@@ -108,7 +220,7 @@
 
         <!-- Food post -->
         <div class="post-box Food">
-            <img src="img/food/pho.jpg" alt="" class="post-img">
+            <img src="../img/food/pho.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Vietnam Pho</a>
             <span class="post-date">30 Sep 2024</span>
@@ -117,17 +229,16 @@
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/athleisuree.jpg" alt="Fashion 6" class="post-img">
+            <img src="../img/fashion/athleisuree.jpg" alt="Fashion 6" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">Sporty Style</a>
             <span class="post-date">30 Sep 2024</span>
             <p class="post-description">Apa itu Sporty Style? Gaya pakaian yang nyaman dan cocok untuk aktivitas sehari-hari, seringkali terinspirasi oleh olahraga.</p>
             <a href="fashion.html" class="learn-more">Learn More</a>
-        </div>
-    
+        </div>    
 
         <div class="post-box Food">
-            <img src="img/food/croissant.jpg" alt="" class="post-img">
+            <img src="../img/food/croissant.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Croissant</a>
             <span class="post-date">30 Sep 2024</span>
@@ -136,7 +247,7 @@
         </div>
 
         <div class="post-box Food">
-            <img src="img/food/sushi.jpg" alt="" class="post-img">
+            <img src="../img/food/sushi.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Sushi</a>
             <span class="post-date">30 Sep 2024</span>
@@ -145,7 +256,7 @@
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/retroo.jpg" alt="Fashion 4" class="post-img">
+            <img src="../img/fashion/retroo.jpg" alt="Fashion 4" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">Trendy Style</a>
             <span class="post-date">30 Sep 2024</span>
@@ -154,7 +265,7 @@
         </div>    
 
         <div class="post-box Food">
-            <img src="img/food/nasipadang.jpg" alt="" class="post-img">
+            <img src="../img/food/nasipadang.jpg" alt="" class="post-img">
             <h2 class="category">Food</h2>
             <a href="#" class="post-title">Nasi Padang</a>
             <span class="post-date">30 Sep 2024</span>
@@ -163,7 +274,7 @@
         </div>
 
         <div class="post-box Travel">
-            <img src="img/travel/pantaikelingking.jpeg" alt="" class="post-img">
+            <img src="../img/travel/pantaikelingking.jpeg" alt="" class="post-img">
             <h2 class="category">Travel</h2>
             <a href="#" class="post-title">Kelingking Beach</a>
             <span class="post-date">30 Sep 2024</span>
@@ -172,12 +283,12 @@
         </div>
 
         <div class="post-box Fashion">
-            <img src="img/fashion/streetwearr.jpg" alt="Fashion 5" class="post-img">
+            <img src="../img/fashion/streetwearr.jpg" alt="Fashion 5" class="post-img">
             <h2 class="category">Fashion</h2>
             <a href="#" class="post-title">Vintage Style</a>
             <span class="post-date">30 Sep 2024</span>
             <p class="post-description">Apa itu Vintage Style? Gaya yang terinspirasi oleh tren fashion masa lalu, membawa kembali desain dan motif klasik.</p>
-            <a href="fashion.html" class="learn-more">Learn More</a>
+            <a href="#" class="learn-more">Learn More</a>
         </div>
     </section>
 
@@ -187,7 +298,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- link to JavaScript -->
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
     
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FunBlogToGo. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
