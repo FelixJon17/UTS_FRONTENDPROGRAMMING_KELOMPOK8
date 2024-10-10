@@ -11,7 +11,6 @@
 </head>
 <body>
 
-    
     <!-- Navbar -->
     <header>
         <div class="nav container">
@@ -37,7 +36,7 @@
     <section id="fashion" class="section">
         <div class="container">
             <div class="fade-in">
-                <h2>Fashion Trends</h2>
+                <h2 style="margin-top: 2rem;">Fashion Trends</h2> <!-- Added margin-top -->
                 <p>Stay ahead in fashion with the latest trends, tips, and guides to perfect your style.</p>
             </div>
             <div class="card-grid">
@@ -92,24 +91,21 @@
     <footer class="footer">
         <p>&copy; 2024 FunBlogToGo. All rights reserved.</p>
         <div class="social">
-          <a href="#" class="bx bxl-facebook"></a>
-          <a href="#" class="bx bxl-twitter"></a>
-          <a href="#" class="bx bxl-instagram"></a>
-          <a href="#" class="bx bxl-linkedin"></a>
+            <a href="#" class="bx bxl-facebook"></a>
+            <a href="#" class="bx bxl-twitter"></a>
+            <a href="#" class="bx bxl-instagram"></a>
+            <a href="#" class="bx bxl-linkedin"></a>
         </div>
     </footer>
     <script>
         function filterCards() {
-    
             let input = document.getElementById('searchInput').value.toLowerCase();
-    
             let cards = document.getElementsByClassName('card');
-    
+
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
                 let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
-                let description = cardContent.getElementsByTagName('p')[0]; 
-    
+                let description = cardContent.getElementsByTagName('p')[0];
 
                 if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
