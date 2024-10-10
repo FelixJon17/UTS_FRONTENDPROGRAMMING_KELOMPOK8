@@ -159,8 +159,8 @@ a{
 
 /* Footer */
 .footer {
-    background-color: #f8f8f8; 
-    color: #333333; 
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 1rem 0;
 }
