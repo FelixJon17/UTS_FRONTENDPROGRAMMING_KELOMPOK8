@@ -177,31 +177,30 @@ a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-    background-color: var(--container-color);
-    padding: 1rem;
-    text-align: center;
-    color: white;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .card-grid {
-        flex-direction: column;
-        align-items: center;
+/* Fade Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
     }
 }
 
-/* Tambahan untuk memberikan jarak pada h2 */
-h2 {
-    margin-top: 20px; /* Tambahkan jarak dari atas */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards; /* Animation duration and easing */
 }
 
-/* Jika ingin seluruh teks turun */
-.fade-in {
-    padding-top: 20px; /* Tambahkan jarak di bagian atas teks */
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer p {
+    margin: 0;
 }
