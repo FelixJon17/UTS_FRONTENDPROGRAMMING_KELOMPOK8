@@ -464,6 +464,7 @@ a{
 }
 
 .post-box{
+    display: block;
     background: var(--bg-color);
     box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
     padding: 15px;
@@ -627,4 +628,46 @@ body {
 /* Tambahkan properti berikut pada selector yang mengandung konten utama */
 .main-content {
   flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+
+    .nav.active ul {
+        display: flex;
+    }
+    .main-content {
+        margin-top: 120px; /* Tambahkan margin untuk layar kecil */
+    }
 }
