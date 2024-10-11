@@ -155,10 +155,12 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    transition: transform 0.3s; 
+    transition: transform 0.3s, box-shadow 0.3s; 
     opacity: 0; /* Start hidden for animation */
     transform: translateY(20px); /* Start below */
     animation: fadeIn 0.5s forwards; /* Fade-in animation */
+    position: relative; /* Add this for pop-up effect */
+    cursor: pointer; /* Change cursor to indicate clickability */
 }
 
 .card img {
@@ -186,12 +188,79 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Pop-up Animation */
+.card:active {
+    animation: popUp 0.3s forwards; /* Trigger pop-up animation */
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Scale up slightly */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
 /* Fade Animation for Cards */
 @keyframes fadeIn {
     to {
         opacity: 1; 
         transform: translateY(0); 
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Fade transition */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation: modalFadeIn 0.5s; /* Animation */
+}
+
+/* Checkbox toggle effect */
+.modal-toggle:checked + .modal {
+    display: block; /* Show modal */
+    opacity: 1; /* Fully visible */
+}
+
+/* Modal fade-in animation */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
 }
 
 /* Footer */
@@ -210,4 +279,4 @@ h2 {
     margin: 0 10px; 
     color: #fff; 
     font-size: 20px; 
-} 
+}  
