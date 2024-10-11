@@ -7,8 +7,12 @@
     <title>FunBlogToGo</title>
     <!-- link to CSS and Box Icons -->
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
 </head>
 <body>
     <!-- header section -->
@@ -24,7 +28,11 @@
                 <li><a href="travel.html">Travel</a></li>
                 <li><a href="login.html" class="login-btn">Login</a></li>
             </ul>
-            
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for food...">
+                <i class="fas fa-search" id="searchIcon"></i>
+            </div>
         </div>
     </header>
     
@@ -306,6 +314,46 @@
         </div>    
     </footer>
    
+    <script>
+        function filterPostBoxes() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let postBoxes = document.getElementsByClassName('post-box');
+            let noResultsMessage = document.getElementById('noResultsMessage');
+            let visiblePostBoxes = 0;
+    
+            for (let i = 0; i < postBoxes.length; i++) {
+                let title = postBoxes[i].getElementsByClassName('post-title')[0];
+                let description = postBoxes[i].getElementsByClassName('post-description')[0];
+    
+                if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
+                    postBoxes[i].style.display = "";
+                    visiblePostBoxes++;
+                } else {
+                    postBoxes[i].style.display = "none";
+                }
+            }
+    
+            // Tampilkan atau sembunyikan pesan "no results"
+            if (visiblePostBoxes === 0) {
+                noResultsMessage.style.display = "block";
+            } else {
+                noResultsMessage.style.display = "none";
+            }
+        }
+    
+        // Event listener untuk input pencarian
+        document.getElementById('searchInput').addEventListener('keyup', filterPostBoxes);
+    
+        // Event listener untuk ikon pencarian
+        document.getElementById('searchIcon').addEventListener('click', function() {
+            filterPostBoxes();
+        });
+    
+        // Toggle menu untuk responsive
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+        });
+    </script>    
       
     <!-- scroll top button -->
     <a href="#" class="scroll-top"><i class='bx bx-chevrons-up'></i></a>

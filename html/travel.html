@@ -25,8 +25,8 @@
             </ul>
 
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search for destinations..." onkeyup="filterCards()">
-                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for food...">
+                <i class="fas fa-search" id="searchIcon"></i>
             </div>
         </div>
     </header>
@@ -102,19 +102,42 @@
         function filterCards() {
             let input = document.getElementById('searchInput').value.toLowerCase();
             let cards = document.getElementsByClassName('card');
+            let noResultsMessage = document.getElementById('noResultsMessage');
+            let visibleCards = 0;
 
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
-                let title = cardContent.getElementsByTagName('h3')[0];
-                let description = cardContent.getElementsByTagName('p')[0]; 
+                let title = cardContent.getElementsByTagName('h3')[0] || cardContent.getElementsByTagName('h4')[0];
+                let description = cardContent.getElementsByTagName('p')[0];
 
                 if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
+                    visibleCards++;
                 } else {
                     cards[i].style.display = "none";
                 }
             }
+
+            if (visibleCards === 0) {
+                noResultsMessage.style.display = "block";
+            } else {
+                noResultsMessage.style.display = "none";
+            }
         }
+
+        // Event listener for search input
+        document.getElementById('searchInput').addEventListener('keyup', filterCards);
+
+        // Event listener for search icon
+        document.getElementById('searchIcon').addEventListener('click', function() {
+            filterCards();
+        });
+
+        // Responsive menu toggle
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+        });
     </script>
+
 </body>
 </html>

@@ -38,12 +38,11 @@ header{
     margin-top: 80px; /* Sesuaikan dengan tinggi navbar */
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 18px 0;
-    flex-wrap: wrap;
 }
 
 .nav ul {
@@ -53,20 +52,19 @@ header{
 }
 
 .nav li {
-    margin: 0 15px; 
+    margin: 0 15px;
     color: #fff;
-    list-style: none
+    list-style: none;
 }
 
 .nav li a {
-    color: rgb(255, 255, 255);
-    padding: 10px 15px; 
-    transition: color 0.3s; 
-    
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
 
 .nav li a:hover {
-    color: var(--second-color); 
+    color: var(--second-color);
 }
 
 .search-container {
