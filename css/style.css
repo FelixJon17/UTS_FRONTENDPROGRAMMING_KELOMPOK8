@@ -497,33 +497,6 @@ a{
     background: hsl(24, 98%, 58%);
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 0;
-}
-
-.footer p {
-  font-size: 1rem;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.social .bx {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.social .bx:hover {
-  color: var(--second-color);
-  transition: 0.3s all linear;
-}
-
 .see-more-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -570,4 +543,31 @@ a{
     padding: 8px 16px;
     font-size: 0.8rem;
   }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.social .bx {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.social .bx:hover {
+  color: var(--second-color);
+  transition: 0.3s all linear;
 }
