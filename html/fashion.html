@@ -26,11 +26,11 @@
             </ul>
 
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search for food...">
-                <i class="fas fa-search" id="searchIcon"></i>
+                <input type="text" id="searchInput" placeholder="Search for fashion..." onkeyup="filterCards()">
+                <i class="fas fa-search"></i>
             </div>
         </div>
-    </header>   
+    </header>
 
     <!-- Fashion Section -->
     <section id="fashion" class="section">
@@ -41,46 +41,49 @@
             </div>
             <div class="card-grid">
                 <div class="card blockcore-card">
-                    <img src="../img/fashion/blockcore.jpg" alt="Fashion 1">
+                    <img src="../img/fashion/blockcoree.jpg" alt="Fashion 1">
                     <div class="card-content">
                         <h3>BlockCore Style</h3>
                         <p>Unique and interesting mix of styles that are unusual but fun to follow!</p>
-                        <p>Apa itu “The Bloke Core”? Tren Fashion Baru yang Bermula dari TikTok “The Bloke Core”. Tren ini didasarkan pada gaya berpakaian stereotypical pub-goer British men yang notabene tidak memiliki ketertarikan terhadap fashion. Hence, penggunaan jersey tim sepak bola kesukaannya untuk pakaian sehari-hari.</p>
+                        <p>BlockCore Style is a unique and interesting mix of styles that are unusual but fun to follow.</p>
                     </div>
                 </div>
                 <div class="card casual-card">
-                    <img src="../img/fashion/casual.jpg" alt="Fashion 2">
+                    <img src="../img/fashion/casualll.jpg" alt="Fashion 2">
                     <div class="card-content">
                         <h3>Casual Style</h3>
-                        <p>Apa Itu Casual Style? Casual style adalah gaya pakaian yang nyaman, santai, dan tidak terlalu formal. Gaya ini sering digunakan dalam situasi sehari-hari atau saat kamu ingin tampil rileks tanpa terlalu banyak pernak-pernik. Pemilihan outfit casual style merupakan aspek penting dalam dunia fashion yang memungkinkan kita untuk tampil santai namun tetap stylish dalam berbagai kesempatan.</p>
+                        <p>Casual style refers to a relaxed and comfortable approach to dressing that is suitable for informal settings. It blends comfort with practicality while still allowing individuals to express their personal style.</p>
                     </div>
                 </div>
                 <div class="card skena-card">
-                    <img src="../img/fashion/skena.jpg" alt="Fashion 3">
+                    <img src="../img/fashion/skenaa.jpg" alt="Fashion 3">
                     <div class="card-content">
                         <h3>Skena Style</h3>
-                        <p>Apa Itu Skena dan Gimana Ciri Khas Outfitnya? Skena outfit dapat dipahami sebagai gaya berpakaian penyuka genre musik tertentu. Skena sendiri adalah istilah budaya pop yang merujuk pada komunitas dengan ciri khas tertentu. Setiap skena memiliki gaya berpakaian dengan ciri khas tersendiri. Seperti skena punk yang tentu berbeda dengan skena hip-hop.</p>
+                        <p>Skena Style can be defined as a fashion trend characterized by its unique identity. This style is often influenced by various musical genres, particularly those that are less mainstream.</p>
                     </div>
                 </div>
                 <div class="card trendy-card">
-                    <img src="../img/fashion/retroo.jpg" alt="Fashion 4">
+                    <img src="../img/fashion/trendyy.jpg" alt="Fashion 4">
                     <div class="card-content">
                         <h3>Trendy Style</h3>
-                        <p>Apa itu Trendy Style? Tren fashion yang selalu mengikuti perkembangan terkini dan dipengaruhi oleh desainer dan influencer.</p>
+                        <p>
+                            Here's a brief explanation of "Trendy Style" in English:
+                            
+                            Trendy Style refers to fashion that is in vogue and follows the latest trends and popular styles. It is characterized by its ever-changing nature, as what is considered "trendy" can shift rapidly based on current events.</p>
                     </div>
                 </div>
                 <div class="card vintage-card">
-                    <img src="../img/fashion/streetwearr.jpg" alt="Fashion 5">
+                    <img src="../img/fashion/vintagee.jpg" alt="Fashion 5">
                     <div class="card-content">
                         <h3>Vintage Style</h3>
-                        <p>Apa itu Vintage Style? Gaya yang terinspirasi oleh tren fashion masa lalu, membawa kembali desain dan elemen dari era sebelumnya.</p>
+                        <p>Vintage style refers to a fashion aesthetic that draws inspiration from past decades, typically from the 1920s to the 1990s. This style celebrates classic designs, quality craftsmanship, and timeless elegance.</p>
                     </div>
                 </div>
                 <div class="card sporty-card">
-                    <img src="../img/fashion/athleisuree.jpg" alt="Fashion 6">
+                    <img src="../img/fashion/athleisureee.jpg" alt="Fashion 6">
                     <div class="card-content">
                         <h3>Sporty Style</h3>
-                        <p>Apa itu Sporty Style? Gaya pakaian yang nyaman dan cocok untuk aktivitas sehari-hari, seringkali terinspirasi oleh olahraga.</p>
+                        <p>Athleisure is a fashion trend that combines athletic wear with casual, everyday clothing. It is designed for comfort and functionality while maintaining a stylish appearance.</p>
                     </div>
                 </div>
             </div>
@@ -101,8 +104,6 @@
         function filterCards() {
             let input = document.getElementById('searchInput').value.toLowerCase();
             let cards = document.getElementsByClassName('card');
-            let noResultsMessage = document.getElementById('noResultsMessage');
-            let visibleCards = 0;
 
             for (let i = 0; i < cards.length; i++) {
                 let cardContent = cards[i].getElementsByClassName('card-content')[0];
@@ -111,31 +112,11 @@
 
                 if (title.innerText.toLowerCase().indexOf(input) > -1 || description.innerText.toLowerCase().indexOf(input) > -1) {
                     cards[i].style.display = "";
-                    visibleCards++;
                 } else {
                     cards[i].style.display = "none";
                 }
             }
-
-            if (visibleCards === 0) {
-                noResultsMessage.style.display = "block";
-            } else {
-                noResultsMessage.style.display = "none";
-            }
         }
-
-        // Event listener for search input
-        document.getElementById('searchInput').addEventListener('keyup', filterCards);
-
-        // Event listener for search icon
-        document.getElementById('searchIcon').addEventListener('click', function() {
-            filterCards();
-        });
-
-        // Responsive menu toggle
-        document.getElementById('menuIcon').addEventListener('click', function() {
-            document.querySelector('.nav').classList.toggle('active');
-        });
     </script>
 
 </body>
